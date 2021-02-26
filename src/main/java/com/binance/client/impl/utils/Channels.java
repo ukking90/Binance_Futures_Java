@@ -22,7 +22,7 @@ public abstract class Channels {
     public static String markPriceChannel(String symbol) {
         JSONObject json = new JSONObject();
         JSONArray params = new JSONArray();
-        params.add(symbol + "@markPrice");
+        params.add(symbol + "@markPrice@1s");
         json.put("params", params);
         json.put("id", System.currentTimeMillis());
         json.put("method", "SUBSCRIBE");
